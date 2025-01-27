@@ -44,7 +44,7 @@ async def set_status():
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=bot_status))
 
 # Listen to msgs
-@client.event
+@client.event 
 async def on_message(message):
     if message.author == client.user:
       return
@@ -149,7 +149,7 @@ async def on_message(message):
 
 @client.command()
 async def bot(ctx, *, text):
-    openai.api_key = "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"
+    openai.api_key = "KEY"
     prompt = (f"{text}")
 
     completions = openai.Completion.create(
@@ -167,7 +167,7 @@ async def bot(ctx, *, text):
 
 @client.command()
 async def criaranuncio(ctx):
-    openai.api_key = "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"
+    openai.api_key = " KEY"
     prompt = (f"Crie um anúncio semanal para minha empresa WebWise de vendas de hospedagem e sites, com planos apartir de R$10.")
 
     completions = openai.Completion.create(
